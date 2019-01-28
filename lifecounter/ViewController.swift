@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var player1Life: Int = 20
+    var player2Life: Int = 20
+    var player3Life: Int = 20
+    var player4Life: Int = 20
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
 }
 
