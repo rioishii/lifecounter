@@ -38,16 +38,24 @@ class ViewController: UIViewController {
             HPs[tag] -= 5
         }
         labelArray[tag]?.text = String(HPs[tag])
+        if (HPs[tag] <= 0) {
+            loserText = "Player \(tag + 1) LOSES!"
+            Loser.text = loserText
+        }
+        
+        checkLoser()
+    }
+    
+    func checkLoser() {
+        var count = 0
         for HP in HPs {
-            if (HP <= 0) {
-                loserText = "Player \(tag + 1) LOSES!"
-                Loser.text = loserText
-                break
-            } else {
-                loserText = ""
-                Loser.text = loserText
+            if HP > 0 {
+                count += 1
             }
+        }
+        
+        if (count == 4) {
+            Loser.text = ""
         }
     }
 }
-
