@@ -246,8 +246,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsz-tf-0qj">
-                                <rect key="frame" x="177" y="356" width="61.666666666666664" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsz-tf-0qj">
+                                <rect key="frame" x="82" y="356" width="250" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -270,6 +270,8 @@
                             <constraint firstItem="C7K-jk-BIB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="TmZ-OV-KD7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y0P-Ll-6qq" secondAttribute="trailing" constant="161.66999999999999" id="Xrx-pY-kW7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TxB-uk-WIK" secondAttribute="trailing" constant="8" id="ZoJ-04-uHr"/>
+                            <constraint firstItem="dsz-tf-0qj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="cxd-Ul-2xK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsz-tf-0qj" secondAttribute="trailing" constant="82" id="dP5-13-NXQ"/>
                             <constraint firstItem="dKw-Z2-zHL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="eJ5-2L-Zm9"/>
                             <constraint firstItem="osX-3S-JLv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="f6o-fx-LnU"/>
                             <constraint firstItem="C7K-jk-BIB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="gFf-LP-KkE"/>
@@ -277,9 +279,7 @@
                             <constraint firstItem="QEz-Ym-INk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161.66999999999999" id="ia4-3P-hgL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QEz-Ym-INk" secondAttribute="trailing" constant="161.33000000000001" id="jYc-dW-UYE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7fm-wn-tf2" secondAttribute="trailing" constant="8" id="lyI-6j-s2u"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsz-tf-0qj" secondAttribute="trailing" constant="175.33000000000001" id="rFY-BA-YoD"/>
                             <constraint firstItem="dKw-Z2-zHL" firstAttribute="top" secondItem="C7K-jk-BIB" secondAttribute="bottom" constant="4" id="rqy-rp-SKP"/>
-                            <constraint firstItem="dsz-tf-0qj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="177" id="suw-IZ-s1b"/>
                             <constraint firstItem="TxB-uk-WIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="t4c-O2-RAB"/>
                             <constraint firstItem="QEz-Ym-INk" firstAttribute="top" secondItem="TxB-uk-WIK" secondAttribute="bottom" constant="4" id="tJp-uV-go6"/>
                         </constraints>
