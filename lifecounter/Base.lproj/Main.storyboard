@@ -30,63 +30,52 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="RqZ-3n-eUn">
-                                                    <rect key="frame" x="15" y="11" width="637" height="53"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="53"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhX-2V-XoL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="98.5" height="53"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns0-6W-Mfp">
-                                                            <rect key="frame" x="107.5" y="0.0" width="99" height="53"/>
+                                                            <rect key="frame" x="59" y="0.0" width="50" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxw-F3-JUA">
-                                                            <rect key="frame" x="215.5" y="0.0" width="98.5" height="53"/>
+                                                            <rect key="frame" x="118" y="0.0" width="50" height="53"/>
                                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="-5">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="changeHP:" destination="B1l-xY-kws" eventType="touchUpInside" id="gdU-Wj-CDm"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6i-9f-TF1">
-                                                            <rect key="frame" x="323" y="0.0" width="98.5" height="53"/>
+                                                            <rect key="frame" x="177" y="0.0" width="50" height="53"/>
                                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="-">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="changeHP:" destination="B1l-xY-kws" eventType="touchUpInside" id="ly3-vw-af3"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFx-XB-xsn">
-                                                            <rect key="frame" x="430.5" y="0.0" width="99" height="53"/>
+                                                            <rect key="frame" x="236" y="0.0" width="50" height="53"/>
                                                             <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="+">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="changeHP:" destination="B1l-xY-kws" eventType="touchUpInside" id="k4F-Ul-SUZ"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-0y-bau">
-                                                            <rect key="frame" x="538.5" y="0.0" width="98.5" height="53"/>
+                                                            <rect key="frame" x="295" y="0.0" width="50" height="53"/>
                                                             <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="+5">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="changeHP:" destination="B1l-xY-kws" eventType="touchUpInside" id="5FF-fV-naz"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="RqZ-3n-eUn" secondAttribute="trailing" id="9zS-6l-udD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="RqZ-3n-eUn" secondAttribute="bottom" id="EuL-MR-IWw"/>
@@ -95,12 +84,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="minus" destination="w6i-9f-TF1" id="oXJ-Ps-YDO"/>
-                                            <outlet property="minusFive" destination="bxw-F3-JUA" id="w0T-jf-ZXP"/>
+                                            <outlet property="minus" destination="w6i-9f-TF1" id="p1h-lN-skJ"/>
+                                            <outlet property="minusFive" destination="bxw-F3-JUA" id="4UH-5B-OIJ"/>
                                             <outlet property="playerHP" destination="Ns0-6W-Mfp" id="Piv-jE-fJq"/>
                                             <outlet property="playerView" destination="xhX-2V-XoL" id="SSz-Fo-0h5"/>
-                                            <outlet property="plus" destination="PFx-XB-xsn" id="RKc-Xk-XMd"/>
-                                            <outlet property="plusFive" destination="XC1-0y-bau" id="gws-LN-O9B"/>
+                                            <outlet property="plus" destination="PFx-XB-xsn" id="qko-Lu-3Xt"/>
+                                            <outlet property="plusFive" destination="XC1-0y-bau" id="fMV-UR-BUC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -39,10 +39,6 @@ class lifecounterScreen: UIViewController {
     }
     
     @IBAction func removePlayer(_ sender: UIBarButtonItem) {
-        deletePlayer()
-    }
-    
-    func deletePlayer() {
         if (players.count > 2) {
             players.removeLast()
             
@@ -55,10 +51,6 @@ class lifecounterScreen: UIViewController {
     
     
     @IBAction func addPlayer(_ sender: UIBarButtonItem) {
-        insertNewPlayer()
-    }
-    
-    func insertNewPlayer() {
         if (players.count < 8) {
             let playerName = "P\(players.count + 1)"
             let newPlayer = Player(playerName: playerName, hp: 20)
@@ -84,9 +76,42 @@ extension lifecounterScreen: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "lifecounterCell") as! lifecounterCell
         
+        cell.minusFive.tag = indexPath.row
+        cell.minusFive.addTarget(self, action: #selector(self.decrementFive(_:)), for: .touchUpInside)
+        cell.plusFive.tag = indexPath.row
+        cell.plusFive.addTarget(self, action: #selector(self.incrementFive(_:)), for: .touchUpInside)
+        cell.minus.tag = indexPath.row
+        cell.minus.addTarget(self, action: #selector(self.decrement(_:)), for: .touchUpInside)
+        cell.plus.tag = indexPath.row
+        cell.plus.addTarget(self, action: #selector(self.increment(_:)), for: .touchUpInside)
+        
         cell.setPlayer(player: player)
         
         return cell
+    }
+    
+    @objc func incrementFive(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp + 5
+        self.players[sender.tag].hp = increasedHp
+        self.tableView.reloadData()
+    }
+    
+    @objc func decrementFive(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp - 5
+        self.players[sender.tag].hp = increasedHp
+        self.tableView.reloadData()
+    }
+    
+    @objc func increment(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp + 1
+        self.players[sender.tag].hp = increasedHp
+        self.tableView.reloadData()
+    }
+    
+    @objc func decrement(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp - 1
+        self.players[sender.tag].hp = increasedHp
+        self.tableView.reloadData()
     }
     
 }
