@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  lifecounter
 //
-//  Created by Rio Ishii on 1/27/19.
+//  Created by Rio Ishii on 2/2/19.
 //  Copyright © 2019 Rio Ishii. All rights reserved.
 //
 
