@@ -14,6 +14,7 @@
 		41E6DD4E22065AE600DF81F6 /* lifecounterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6DD4D22065AE600DF81F6 /* lifecounterScreen.swift */; };
 		41E6DD50220661CD00DF81F6 /* lifecounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6DD4F220661CD00DF81F6 /* lifecounterCell.swift */; };
 		41E6DD522206632B00DF81F6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6DD512206632B00DF81F6 /* Player.swift */; };
+		41E6DD542207CA3D00DF81F6 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6DD532207CA3D00DF81F6 /* historyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		41E6DD4D22065AE600DF81F6 /* lifecounterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterScreen.swift; sourceTree = "<group>"; };
 		41E6DD4F220661CD00DF81F6 /* lifecounterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterCell.swift; sourceTree = "<group>"; };
 		41E6DD512206632B00DF81F6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		41E6DD532207CA3D00DF81F6 /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				41E6DD4D22065AE600DF81F6 /* lifecounterScreen.swift */,
 				41E6DD4F220661CD00DF81F6 /* lifecounterCell.swift */,
 				41E6DD512206632B00DF81F6 /* Player.swift */,
+				41E6DD532207CA3D00DF81F6 /* historyViewController.swift */,
 				41E6DD3F22065AAB00DF81F6 /* Main.storyboard */,
 				41E6DD4222065AAD00DF81F6 /* Assets.xcassets */,
 				41E6DD4422065AAD00DF81F6 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				41E6DD4E22065AE600DF81F6 /* lifecounterScreen.swift in Sources */,
 				41E6DD50220661CD00DF81F6 /* lifecounterCell.swift in Sources */,
 				41E6DD3C22065AAB00DF81F6 /* AppDelegate.swift in Sources */,
+				41E6DD542207CA3D00DF81F6 /* historyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

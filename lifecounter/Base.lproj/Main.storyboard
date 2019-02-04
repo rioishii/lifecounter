@@ -101,13 +101,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-WE-JSt">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="View History" id="OrH-wr-fLe">
+                                        <connections>
+                                            <segue destination="PQd-1h-W1A" kind="show" id="7Ho-XB-QvT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="NvI-WE-JSt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Gqw-fr-2In"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ED0-cW-eCv" secondAttribute="bottom" id="HZs-mO-Qyh"/>
                             <constraint firstItem="ED0-cW-eCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OG5-h4-Snq"/>
+                            <constraint firstItem="NvI-WE-JSt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tsm-7y-XfA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ED0-cW-eCv" secondAttribute="trailing" id="dQu-Iv-Ohx"/>
                             <constraint firstItem="ED0-cW-eCv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mKF-Tk-uuk"/>
+                            <constraint firstItem="NvI-WE-JSt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q2a-MR-YOo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -141,6 +154,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133.5999999999999" y="792.95352323838085"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="h7S-GI-nXX">
+            <objects>
+                <viewController title="History" id="PQd-1h-W1A" customClass="historyViewController" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wf1-fG-TYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KG3-CT-RdP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KG3-CT-RdP" firstAttribute="top" secondItem="39Q-dw-M9M" secondAttribute="top" id="Gfk-k8-KUa"/>
+                            <constraint firstItem="KG3-CT-RdP" firstAttribute="leading" secondItem="39Q-dw-M9M" secondAttribute="leading" id="QSe-YJ-Jyy"/>
+                            <constraint firstItem="KG3-CT-RdP" firstAttribute="bottom" secondItem="39Q-dw-M9M" secondAttribute="bottom" id="c06-zo-2i1"/>
+                            <constraint firstItem="KG3-CT-RdP" firstAttribute="trailing" secondItem="39Q-dw-M9M" secondAttribute="trailing" id="qAJ-b3-eUa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="39Q-dw-M9M"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollview" destination="KG3-CT-RdP" id="Izq-bz-GqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkQ-cC-02E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917.5999999999999" y="792.95352323838085"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cpw-BW-4HG">

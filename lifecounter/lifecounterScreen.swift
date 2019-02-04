@@ -14,6 +14,7 @@ class lifecounterScreen: UIViewController {
     @IBOutlet weak var loserText: UILabel!
     
     var players: [Player] = []
+    var history: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,12 +67,14 @@ class lifecounterScreen: UIViewController {
     
     @objc func incrementFive(_ sender: UIButton) {
         let increasedHp = players[sender.tag].hp + 5
+        history.append("Player\(sender.tag + 1) gained five life")
         self.players[sender.tag].hp = increasedHp
         self.tableView.reloadData()
     }
     
     @objc func decrementFive(_ sender: UIButton) {
         let increasedHp = players[sender.tag].hp - 5
+        history.append("Player\(sender.tag + 1) lost five life")
         self.players[sender.tag].hp = increasedHp
         checkLoser(sender.tag)
         self.tableView.reloadData()
@@ -79,12 +82,14 @@ class lifecounterScreen: UIViewController {
     
     @objc func increment(_ sender: UIButton) {
         let increasedHp = players[sender.tag].hp + 1
+        history.append("Player\(sender.tag + 1) gained one life")
         self.players[sender.tag].hp = increasedHp
         self.tableView.reloadData()
     }
     
     @objc func decrement(_ sender: UIButton) {
         let increasedHp = players[sender.tag].hp - 1
+        history.append("Player\(sender.tag + 1) lost one life")
         self.players[sender.tag].hp = increasedHp
         checkLoser(sender.tag)
         self.tableView.reloadData()
@@ -93,6 +98,7 @@ class lifecounterScreen: UIViewController {
     func checkLoser(_ tag: Int) {
         if (players[tag].hp <= 0) {
             loserText.text = "Player \(tag + 1) LOSES!"
+            history.append("Player\(tag + 1) died")
         }
         gameOver()
     }
@@ -123,6 +129,7 @@ class lifecounterScreen: UIViewController {
         
         if (count == players.count - 1) {
             loserText.text = "GAME OVER \(winner[0]) Wins!"
+            history.append("Player\(winner[0].last!) Won")
             players.removeAll()
             players = createArray()
             self.tableView.reloadData()
@@ -133,9 +140,14 @@ class lifecounterScreen: UIViewController {
         players.removeAll()
         players = createArray()
         loserText.text = ""
+        history.append("Reset Game")
         self.tableView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let historyView = segue.destination as! historyViewController
+        historyView.history = history
+    }
     
 }
 
