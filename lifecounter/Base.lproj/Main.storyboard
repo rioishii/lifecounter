@@ -112,12 +112,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4IJ-AN-9ar">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Remove" id="cxF-ik-0K6">
                             <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="removePlayer:" destination="BYZ-38-t0r" id="TPG-ar-yrM"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qgY-iY-P1R">
+                            <rect key="frame" x="168" y="7" width="39" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Reset"/>
+                            <connections>
+                                <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q2q-i1-yyE"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="pJJ-m6-625">
                             <connections>
                                 <action selector="addPlayer:" destination="BYZ-38-t0r" id="55m-Um-Fd7"/>

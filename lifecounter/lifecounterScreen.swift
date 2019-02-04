@@ -67,7 +67,6 @@ class lifecounterScreen: UIViewController {
     @objc func incrementFive(_ sender: UIButton) {
         let increasedHp = players[sender.tag].hp + 5
         self.players[sender.tag].hp = increasedHp
-        check()
         self.tableView.reloadData()
     }
     
@@ -75,14 +74,12 @@ class lifecounterScreen: UIViewController {
         let increasedHp = players[sender.tag].hp - 5
         self.players[sender.tag].hp = increasedHp
         checkLoser(sender.tag)
-        check()
         self.tableView.reloadData()
     }
     
     @objc func increment(_ sender: UIButton) {
         let increasedHp = players[sender.tag].hp + 1
         self.players[sender.tag].hp = increasedHp
-        check()
         self.tableView.reloadData()
     }
     
@@ -90,13 +87,15 @@ class lifecounterScreen: UIViewController {
         let increasedHp = players[sender.tag].hp - 1
         self.players[sender.tag].hp = increasedHp
         checkLoser(sender.tag)
-        check()
         self.tableView.reloadData()
     }
     
     func checkLoser(_ tag: Int) {
         if (players[tag].hp <= 0) {
             loserText.text = "Player \(tag + 1) LOSES!"
+            players.removeAll()
+            players = createArray()
+            self.tableView.reloadData()
         }
     }
     
@@ -112,6 +111,14 @@ class lifecounterScreen: UIViewController {
             loserText.text = ""
         }
     }
+    
+    @IBAction func reset(_ sender: Any) {
+        players.removeAll()
+        players = createArray()
+        loserText.text = ""
+        self.tableView.reloadData()
+    }
+    
     
 }
 
