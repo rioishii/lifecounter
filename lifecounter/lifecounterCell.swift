@@ -25,25 +25,4 @@ class lifecounterCell: UITableViewCell {
         playerHP.text = String(player.hp)
     }
     
-    func didClick(_ sender: UIButton) {
-        let text = sender.titleLabel!.text;
-        switch text {
-        case "-5":
-            playerItem.hp -= 5
-        case "+5":
-            playerItem.hp += 5
-        case "+":
-            playerItem.hp += 1
-        default:
-            playerItem.hp -= 1
-        }
-        playerHP.text = String(playerItem.hp)
-    }
-    
-    func setListeners() {
-        minusFive.addTarget(self, action: Selector(("didClick")), for: .touchUpInside);
-        minus.addTarget(self, action: Selector(("didClick")), for: .touchUpInside);
-        plus.addTarget(self, action: Selector(("didClick")), for: .touchUpInside);
-        plusFive.addTarget(self, action: Selector(("didClick")), for: .touchUpInside);
-    }
 }

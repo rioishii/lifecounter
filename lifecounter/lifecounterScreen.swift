@@ -11,6 +11,7 @@ import UIKit
 class lifecounterScreen: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loserText: UILabel!
     
     var players: [Player] = []
     
@@ -63,6 +64,55 @@ class lifecounterScreen: UIViewController {
         }
     }
     
+    @objc func incrementFive(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp + 5
+        self.players[sender.tag].hp = increasedHp
+        check()
+        self.tableView.reloadData()
+    }
+    
+    @objc func decrementFive(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp - 5
+        self.players[sender.tag].hp = increasedHp
+        checkLoser(sender.tag)
+        check()
+        self.tableView.reloadData()
+    }
+    
+    @objc func increment(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp + 1
+        self.players[sender.tag].hp = increasedHp
+        check()
+        self.tableView.reloadData()
+    }
+    
+    @objc func decrement(_ sender: UIButton) {
+        let increasedHp = players[sender.tag].hp - 1
+        self.players[sender.tag].hp = increasedHp
+        checkLoser(sender.tag)
+        check()
+        self.tableView.reloadData()
+    }
+    
+    func checkLoser(_ tag: Int) {
+        if (players[tag].hp <= 0) {
+            loserText.text = "Player \(tag + 1) LOSES!"
+        }
+    }
+    
+    func check() {
+        var count = 0
+        for player in players {
+            if player.hp > 0 {
+                count += 1
+            }
+        }
+        
+        if (count == players.count) {
+            loserText.text = ""
+        }
+    }
+    
 }
 
 extension lifecounterScreen: UITableViewDataSource, UITableViewDelegate {
@@ -88,30 +138,6 @@ extension lifecounterScreen: UITableViewDataSource, UITableViewDelegate {
         cell.setPlayer(player: player)
         
         return cell
-    }
-    
-    @objc func incrementFive(_ sender: UIButton) {
-        let increasedHp = players[sender.tag].hp + 5
-        self.players[sender.tag].hp = increasedHp
-        self.tableView.reloadData()
-    }
-    
-    @objc func decrementFive(_ sender: UIButton) {
-        let increasedHp = players[sender.tag].hp - 5
-        self.players[sender.tag].hp = increasedHp
-        self.tableView.reloadData()
-    }
-    
-    @objc func increment(_ sender: UIButton) {
-        let increasedHp = players[sender.tag].hp + 1
-        self.players[sender.tag].hp = increasedHp
-        self.tableView.reloadData()
-    }
-    
-    @objc func decrement(_ sender: UIButton) {
-        let increasedHp = players[sender.tag].hp - 1
-        self.players[sender.tag].hp = increasedHp
-        self.tableView.reloadData()
     }
     
 }
