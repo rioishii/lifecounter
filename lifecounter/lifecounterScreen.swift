@@ -98,7 +98,7 @@ class lifecounterScreen: UIViewController {
     func checkLoser(_ tag: Int) {
         if (players[tag].hp <= 0) {
             loserText.text = "Player \(tag + 1) LOSES!"
-            history.append("Player\(tag + 1) died")
+            history.append("Player\(tag + 1) Died")
         }
         gameOver()
     }

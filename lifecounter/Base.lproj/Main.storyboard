@@ -160,11 +160,30 @@
             <objects>
                 <viewController title="History" id="PQd-1h-W1A" customClass="historyViewController" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wf1-fG-TYh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KG3-CT-RdP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1936"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvC-wd-Qu5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2000" id="saR-QL-u4t"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jvC-wd-Qu5" secondAttribute="bottom" id="4EM-ot-hL7"/>
+                                    <constraint firstItem="jvC-wd-Qu5" firstAttribute="top" secondItem="KG3-CT-RdP" secondAttribute="top" id="CXJ-6F-HVE"/>
+                                    <constraint firstItem="jvC-wd-Qu5" firstAttribute="leading" secondItem="KG3-CT-RdP" secondAttribute="leading" id="EMi-dy-cfO"/>
+                                    <constraint firstItem="jvC-wd-Qu5" firstAttribute="top" secondItem="KG3-CT-RdP" secondAttribute="top" id="KYs-aa-H2V"/>
+                                    <constraint firstItem="jvC-wd-Qu5" firstAttribute="centerX" secondItem="KG3-CT-RdP" secondAttribute="centerX" id="Wno-Dx-5ci"/>
+                                    <constraint firstAttribute="trailing" secondItem="jvC-wd-Qu5" secondAttribute="trailing" id="iZO-Eg-S6g"/>
+                                    <constraint firstItem="jvC-wd-Qu5" firstAttribute="leading" secondItem="KG3-CT-RdP" secondAttribute="leading" id="uJt-TZ-O0w"/>
+                                    <constraint firstAttribute="trailing" secondItem="jvC-wd-Qu5" secondAttribute="trailing" id="z6t-ri-keT"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,10 +191,12 @@
                             <constraint firstItem="KG3-CT-RdP" firstAttribute="top" secondItem="39Q-dw-M9M" secondAttribute="top" id="Gfk-k8-KUa"/>
                             <constraint firstItem="KG3-CT-RdP" firstAttribute="leading" secondItem="39Q-dw-M9M" secondAttribute="leading" id="QSe-YJ-Jyy"/>
                             <constraint firstItem="KG3-CT-RdP" firstAttribute="bottom" secondItem="39Q-dw-M9M" secondAttribute="bottom" id="c06-zo-2i1"/>
+                            <constraint firstItem="jvC-wd-Qu5" firstAttribute="width" secondItem="Wf1-fG-TYh" secondAttribute="width" id="gRs-9m-b8X"/>
                             <constraint firstItem="KG3-CT-RdP" firstAttribute="trailing" secondItem="39Q-dw-M9M" secondAttribute="trailing" id="qAJ-b3-eUa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="39Q-dw-M9M"/>
                     </view>
+                    <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="scrollview" destination="KG3-CT-RdP" id="Izq-bz-GqK"/>
                     </connections>
