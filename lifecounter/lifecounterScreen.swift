@@ -93,10 +93,8 @@ class lifecounterScreen: UIViewController {
     func checkLoser(_ tag: Int) {
         if (players[tag].hp <= 0) {
             loserText.text = "Player \(tag + 1) LOSES!"
-            players.removeAll()
-            players = createArray()
-            self.tableView.reloadData()
         }
+        gameOver()
     }
     
     func check() {
@@ -109,6 +107,25 @@ class lifecounterScreen: UIViewController {
         
         if (count == players.count) {
             loserText.text = ""
+        }
+    }
+    
+    func gameOver() {
+        var count = 0
+        var winner: [String] = []
+        for player in players {
+            if player.hp <= 0 {
+                count += 1
+            } else {
+                winner.append(player.playerName)
+            }
+        }
+        
+        if (count == players.count - 1) {
+            loserText.text = "GAME OVER \(winner[0]) Wins!"
+            players.removeAll()
+            players = createArray()
+            self.tableView.reloadData()
         }
     }
     
